@@ -1,0 +1,117 @@
+@mixin button {
+    border-radius: 6px;
+    text-align: center;
+    font-size: 16px;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-facebook { 
+    @include button;
+    background-color: $color-facebook;
+    color: $color-white;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(37, 37, 124);
+
+    } 
+
+}
+.btn-social { 
+    @include button;
+    background-color: $color-white;
+    color: $color-black;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    &:hover {
+        cursor: pointer;
+        background-color: $color-grey;
+
+    } 
+
+}
+
+.btn-black { 
+    @include button;
+    background-color: $color-black;
+    color: $color-white;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    &:hover {
+        cursor: pointer;
+        background-color: $color-grey;
+    } 
+}
+
+.btn-round-s { 
+    @include button;
+    background-color: $color-white;
+    color: $color-black;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 10px 10px;
+    text-decoration: none;
+    &:hover {
+        cursor: pointer;
+        background-color: $color-grey;
+    } 
+} 
+
+.btn-round-m { 
+    @include button;
+    background-color: $color-black;
+    color: $color-white;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    padding: 10px 10px;
+    text-decoration: none;
+    &:hover {
+        cursor: pointer;
+        background-color: $color-grey;
+    } 
+}
+
+.btn-round-l { 
+    @include button;
+    background-color: $color-black;
+    color: $color-white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 10px 10px;
+    text-decoration: none;
+    &:hover {
+        cursor: pointer;
+        background-color: $color-grey;
+    } 
+}
+
+.btn-round-xl { 
+    @include button;
+    background-color: $color-black;
+    color: $color-white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    padding: 10px 10px;
+    text-decoration: none;
+    &:hover {
+        cursor: pointer;
+        background-color: $color-grey;
+    } 
+}
+
