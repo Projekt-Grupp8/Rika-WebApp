@@ -1,0 +1,97 @@
+#client-reviews {
+   margin-top: 3vh;
+
+   .container {
+
+      h4 {
+         @include h4;
+         margin-bottom: 15px;
+      }
+
+      .gridBox {
+         display: grid;
+         grid-template-columns: 1fr;
+         gap: 20px;
+
+         @include md {
+            grid-template-columns: repeat(2, 1fr);
+         }
+
+         @include lg {
+            grid-template-columns: repeat(3, 1fr);
+         }
+
+         @include xxl {
+            grid-template-columns: repeat(4, 1fr);
+         }
+
+         .gridContent {
+            display: flex;
+            gap: 10px;
+
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px $color-background-grey;
+
+            .imageSide {
+               display: grid;
+               place-items: center;
+               background-color: $color-background-grey;
+
+               $userImageSize: 60px;
+               $userImageRadius: 15px;
+
+               border-radius: $userImageRadius;
+               width: $userImageSize;
+               min-width: $userImageSize;
+               height: $userImageSize;
+
+               img {
+                  object-fit: cover;
+                  width: $userImageSize;
+                  height: $userImageSize;
+                  border-radius: $userImageRadius;
+               }
+            }
+
+            .infoSide {
+
+               .details {
+                  display: flex;
+                  justify-content: space-between;
+
+                  .reviewName {
+                     @include h6;
+                     margin-bottom: 4px;
+                  }
+
+                  .reviewDate {
+                     font-family: $font-Atkinson;
+                     font-size: 9px;
+                     color: #888888;
+                     font-weight: bold;
+                  }
+
+                  .reviewStars {
+                     display: flex;
+                     flex-wrap: nowrap;
+                     gap: 3px;
+                     align-self: center;
+
+                     font-size: 11px;
+                     color: #ffab07;
+                  }
+               }
+
+               .reviewText {
+                  font-family: $font-Atkinson;
+                  font-size: 11px;
+                  line-height: 140%;
+                  margin-bottom: 0px;
+               }
+            }
+
+         }
+      }
+   }
+}
