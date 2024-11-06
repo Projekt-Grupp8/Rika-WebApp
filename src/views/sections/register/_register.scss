@@ -1,5 +1,12 @@
 #register {
     .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include lg {
+            max-width: 812px;
+        }
         .image-container {
             display: flex;
             align-items: center;
@@ -10,17 +17,21 @@
         .form-title {
             margin-bottom: 3rem;
             padding: 0px 10px;
+
+            h1 {
+                @include h3;
+            }
         }
         .register-form {
             padding: 0px 10px;
+
             .input-area {
                 display: flex;
                 flex-direction: column;
                 
 
                 label {
-                    @include h6;
-                    
+                    @include h5;
                 }
                 input {
                     padding: 8px 0px;
@@ -29,23 +40,31 @@
                     outline: none;
 
                     &:focus {
-                        border-bottom: 1px solid black;
+                        border-bottom: 1px solid $color-black;
                     }
 
                 }
             }
-            .user-name {
+            .success-message {
+                color: green;
+                font-size: 14px;
+                margin-top: 10px;
+                font-weight: bold;
+              }
 
-            }
-            .email {
+            .error-message {
+                color: red;
+                font-size: 14px;
+                margin-top: 5px;
+                font-weight: bold;
+                
+                // Exempel på en ikon framför felmeddelandet
+                &::before {
+                  content: '⚠️'; // Unicode för en varningstriangel
+                  margin-right: 5px; // Mellanrum mellan ikonen och texten
+                }
+              }
 
-            }
-            .password {
-
-            }
-            .confirm-password {
-
-            }
             .terms-conditions {
                 display: flex;
                 align-items: start;
