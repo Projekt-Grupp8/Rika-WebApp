@@ -1,0 +1,207 @@
+/* ===================  Generall Styles =================== */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden; 
+}
+/* =================== Header Styles =================== */
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px; 
+    padding: 10px;
+}
+.header a img{
+    margin-left: 10px;
+}
+
+.input-container {
+    position: relative;
+    width: 50%; 
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    border: none; 
+    border-radius: 5px;
+   
+}
+
+
+.input-container .input-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: auto;
+    pointer-events: none;
+}
+
+
+
+
+/* =================== Footer Styles =================== */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+
+.Nav-Footer.container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.Nav-Footer.container a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: color 0.3s ease;
+}
+
+
+.Nav-Footer.container a:not(:first-child) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.Nav-Footer.container a img {
+    width: 18px; 
+    height: auto;
+    margin-bottom: 5px;
+}
+
+
+.Nav-Footer.container a:first-child {
+    background-color: #f0f0f0;
+    padding-right: 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 8px;
+}
+
+
+.Nav-Footer.container a:first-child img {
+    width: 36px;
+    height: 36px; 
+    border-radius: 50%;
+}
+
+
+.Nav-Footer.container a:first-child:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* =================== Products Styles (Main) =================== */
+
+main {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+
+.Grid-Product {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px;
+}
+
+
+.product-card {
+    position: relative;
+    /* background-color: #f9f9f9; */
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-card a{
+  position: absolute;
+  right: 20px;
+  top: 22px;
+}
+
+.product-card h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.product-card p {
+    font-size: 14px;
+    color: #555;
+    margin: 2px 0;
+}
+
+.product-card span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #0f0f0f;
+    margin: 2px 0;
+}
+
+/* =================== Desktop styles=================== */
+
+@media (min-width: 768px) {
+   
+    footer {
+        position: sticky;
+        top: 0;
+    }
+    .Nav-Footer.container {
+        position: static;
+        width: 90%;
+        max-width: 600px;
+        margin: auto;
+        border-radius: 0 0 30px 30px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+}
