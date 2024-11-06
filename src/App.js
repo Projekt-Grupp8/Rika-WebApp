@@ -2,7 +2,7 @@ import './app.min.css';
 import LoginRegister from './views/sections/LoginRegister/LoginRegister.jsx';
 import Login from './views/sections/Login/Login';
 import EmailVerify from './views/sections/EmailVerify/EmailVerify';
-import Register from './views/sections/register/Register.jsx'
+import { Register } from './views/sections/register/Register'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
