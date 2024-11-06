@@ -1,0 +1,107 @@
+@import '../../../scss/core/typography';
+@import '../../../scss/core/colors';
+@import '../../../scss/components/buttons';
+
+#login-section {
+    font-family: montserrat;
+    padding-top: 110px;
+    padding-bottom: 35px;
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .login-welcome {
+            width: 100%;
+            padding-top: 55px;
+            h1 {
+                @include h3;
+                font-family: montserrat;
+            }
+            p {
+                font-weight: 200;
+                color: $color-grey;
+                font-size: 14px;
+                font-family: montserrat;
+            }
+          
+        }
+        .login-form {
+            width: 100%;
+            padding-top: 30px;
+            
+            form {
+                display: flex;
+                flex-direction: column;
+                
+                .email {
+                    display: flex;
+                    flex-direction: column;
+                    
+                    label {
+                        @include h5;
+                        font-family: montserrat;
+                    }
+                    input {
+                        
+                        border: none;
+                        border-bottom: 1px solid #EEEEEE;
+                        outline: none;
+                        &:focus {
+                            border-bottom: 1px solid $color-black;
+                        }
+                    }
+                }
+                .password {
+                    display: flex;
+                    flex-direction: column;
+                    padding-top: 20px;
+                    label {
+                        @include h5;
+                        font-family: montserrat;
+                    }
+                    input {
+                        
+                        border: none;
+                        border-bottom: 1px solid #EEEEEE;
+                        outline: none;
+                        &:focus {
+                            border-bottom: 1px solid $color-black;
+                        }
+                    }
+                }
+                .button-login {
+                    padding-top: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 15px;
+                }
+                .social-media-login {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 15px;
+                    button {
+                        border: 0.5px solid lighten($color-grey, 20%);
+                        word-spacing: 0px;
+                        justify-content: start;
+                        padding-left: 2.6rem;
+                        strong {
+                            color: $color-grey;
+                        }
+                        .facebook {
+                            color: white;
+                        }
+                    }
+                }
+                .btn-width {
+                    width: 100%;
+                    
+                }
+                
+                
+            }
+        }
+    }
+}
