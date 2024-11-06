@@ -6,7 +6,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        
+        @include lg {
+            max-width: 812px;
+        }
         .login-welcome {
             width: 100%;
             padding-top: 55px;
