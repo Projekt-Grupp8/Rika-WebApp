@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const useLogin = () => {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
   const login = async (email, password) => {
     setIsLoading(true);
@@ -24,6 +26,9 @@ const useLogin = () => {
       }
 
       localStorage.setItem('token', data.token); 
+      
+      navigate('/verify');
+
       return { success: true, data };
 
     } catch (err) {
