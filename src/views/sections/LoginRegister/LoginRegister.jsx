@@ -1,8 +1,17 @@
 import React from 'react'
+import logo from './../../../images/logo_white.svg'
 
 const LoginRegister = () => {
   return (
-    <div className='Login'>LoginRegister</div>
+    <>
+      <div className='login-register'>
+        <div>
+          <img src={logo} alt="" />
+        </div>
+        <a className='btn-social' href="/login">Login</a>
+        <a className='btn-gry' href="/signUp">Sign Up</a>
+      </div>
+    </>
   )
 }
 

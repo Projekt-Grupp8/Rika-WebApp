@@ -152,4 +152,51 @@
   background-color: rgb(102, 102, 102);
 }
 
+.login-register {
+  background-color: rgb(204, 204, 204);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  gap: 25px;
+}
+.login-register img {
+  margin-bottom: 10rem;
+}
+.login-register a {
+  font-weight: 600;
+  margin-left: 40px;
+  margin-right: 40px;
+}
 
+.btn-gry {
+  border-radius: 6px;
+  text-align: center;
+  font-size: 16px;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background-color: rgb(204, 204, 204);
+  color: #ffffff;
+  border: solid 2px;
+  border-color: white;
+  border-radius: 30px;
+  text-decoration: none;
+}
+.btn-gry:hover {
+  cursor: pointer;
+  background-color: rgb(102, 102, 102);
+}
+
+.Front {
+  background-color: rgb(204, 204, 204);
+  height: 100vh;
+  display: grid;
+  align-items: center;
+}
+.Front img {
+  justify-self: center;
+}

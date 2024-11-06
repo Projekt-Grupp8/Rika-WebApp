@@ -1,6 +1,35 @@
-.Login {
-    color: red;
-    background-color: red;
-    margin-top: 100px;
-    
+.login-register {
+    background-color: $color-background-grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+
+    gap: 25px;
+
+    img {
+        margin-bottom: 10rem;
+      }
+
+     a {
+        font-weight: 600;
+        margin-left: 40px;
+        margin-right: 40px
+     }
+}
+
+
+.btn-gry { 
+    @include button;
+    background-color: $color-background-grey;
+    color: $color-white;
+    border: solid 2px;
+    border-color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    &:hover {
+        cursor: pointer;
+        background-color: $color-grey;
+    } 
 }
