@@ -115,3 +115,17 @@
     } 
 }
 
+.btn-categories {
+    @include button;
+    padding: 15px;
+    background-color: $color-black;
+    color: $color-white;
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    width: 100%;
+    &:hover {
+        cursor: pointer;
+        background-color: $color-grey;
+    } 
+}

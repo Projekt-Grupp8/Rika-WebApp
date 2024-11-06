@@ -1,11 +1,14 @@
 import './App.css';
-import LoginRegister from './views/sections/LoginRegister/LoginRegister.jsx';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Categories from './components/Categories'
 
 function App() {
   return (
     <div className='container'>
-      <a href='/' className='btn-round-xl'><i class="fa-light fa-bars-staggered"></i></a>
-      <LoginRegister />
+      <Header />
+      <Categories />
+      <Footer />
     </div>
   );
 }
