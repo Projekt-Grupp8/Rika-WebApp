@@ -1,11 +1,10 @@
-import './App.css';
-import LoginRegister from './views/sections/LoginRegister/LoginRegister.jsx';
+import './app.min.css';
+import Login from './views/sections/Login/Login';
 
 function App() {
   return (
     <div className='container'>
-      <a href='/' className='btn-round-xl'><i class="fa-light fa-bars-staggered"></i></a>
-      <LoginRegister />
+      <Login />
     </div>
   );
 }

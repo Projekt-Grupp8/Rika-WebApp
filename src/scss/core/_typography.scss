@@ -7,7 +7,7 @@ $font-weight-semibold: 600;
 @mixin standard-text {
     line-height: 150%;
     font-weight: 400;
-    color: $color-gray;
+    color: $color-grey;
     font-family: $font-Atkinson;
 }
 
@@ -23,7 +23,7 @@ $font-weight-semibold: 600;
     color: $color-black;
 }
 
-    @mixin text-nav { @include standard-text; font-size: 16px; color: $gray-800; font-weight: 600 !important; }
+    @mixin text-nav { @include standard-text; font-size: 16px; color: $color-grey; font-weight: 600 !important; }
 
 @mixin text-xs { @include standard-text; font-size: 12px !important;}
 @mixin text-s { @include standard-text; font-size: 14px !important; }
