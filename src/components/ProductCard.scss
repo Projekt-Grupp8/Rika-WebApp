@@ -1,0 +1,63 @@
+/* =================== Products Styles (Main) =================== */
+
+main {
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .Grid-Product {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px;
+  }
+  
+  .product-card {
+    position: relative;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+    // El enlace con la imagen del corazón se posiciona en la esquina superior derecha
+    a {
+      position: absolute;
+      right: 20px;
+      top: 22px;
+    }
+  
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+  
+    h2 {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 5px 0;
+    }
+  
+    p {
+      font-size: 14px;
+      color: #555;
+      margin: 2px 0;
+    }
+  
+    span {
+      font-size: 14px;
+      font-weight: bold;
+      color: #0f0f0f;
+      margin: 2px 0;
+    }
+  }
+  

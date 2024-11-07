@@ -1,5 +1,6 @@
 import './app.min.css';
 import LoginRegister from './views/sections/LoginRegister/LoginRegister.jsx';
+import CategoryPage from './views/sections/categoryPage/CategoryPage.jsx';
 import Login from './views/sections/Login/Login';
 import EmailVerify from './views/sections/EmailVerify/EmailVerify';
 import { Register } from './views/sections/register/Register'
@@ -14,6 +15,7 @@ function App() {
         <Route path="/verify" element={<EmailVerify/>}/>
         <Route path="/" element={<LoginRegister/>} />
         <Route path="/register" element ={<Register/>} />
+        <Route path="/Product" element={<CategoryPage/>} />
       </Routes>
     </BrowserRouter>
   );
