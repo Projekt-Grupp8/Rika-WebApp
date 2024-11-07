@@ -1,5 +1,6 @@
 import './app.min.css';
 import LoginRegister from './views/sections/LoginRegister/LoginRegister.jsx';
+import CategoryPage from './views/sections/categoryPage/CategoryPage.jsx';
 import Login from './views/sections/Login/Login';
 import EmailVerify from './views/sections/EmailVerify/EmailVerify';
 import MinePage from './views/sections/MinePage/MinePage.jsx';
@@ -46,6 +47,7 @@ function AuthLayout({ isAuthenticated, setIsAuthenticated }) {
         <Route path="/register" element ={<Register/>} />
         <Route path="/home" element={isAuthenticated ? <MinePage onLogout={handleLogout} /> : <Navigate to="/login" />}/>
         <Route path="/user" element ={isAuthenticated ? <User onLogout={handleLogout} /> : <Navigate to="/login" />} />
+        <Route path="/product" element ={isAuthenticated ? <CategoryPage onLogout={handleLogout} /> : <Navigate to="/login" />} />
       </Routes>
       {isAuthenticated && <Footer/>}
     </>
