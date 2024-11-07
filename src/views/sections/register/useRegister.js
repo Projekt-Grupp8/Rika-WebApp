@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export const useRegister = () => {
   const [isChecked, setIsChecked] = useState(false);
@@ -11,6 +12,7 @@ export const useRegister = () => {
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const navigate = useNavigate();
 
   // Regex-mönster för validering
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // E-post regex
@@ -149,12 +151,15 @@ export const useRegister = () => {
   
         const data = await response.json();
   
-        if (response.status >= 200 && response.status < 300) {
+        if (response.ok) {
+
+          localStorage.setItem('registerToken', data.token);
+
           setSuccessMessage('Registration successful! Redirecting to login page...');
           setErrorMessage(''); // Rensa eventuella tidigare felmeddelanden
           // Omdirigera användaren efter ett par sekunder (eller direkt)
           setTimeout(() => {
-            window.location.href = '/login'; // Ändra URL till den sida du vill omdirigera till
+            navigate('/verify'); // Ändra URL till den sida du vill omdirigera till
           }, 3000);
         } else {
           // Hantera API-fel
