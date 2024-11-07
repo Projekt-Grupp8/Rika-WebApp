@@ -10,34 +10,34 @@ const EmailVerify = () => {
   const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
-      event.preventDefault();
-      setIsLoading(true);
-      setMessage('');
-        try {
-          
-          const response = await fetch('https://userproviderrika-e6cvaydrc0edh7eb.westeurope-01.azurewebsites.net/verify', {
-              method: 'POST',
-              headers: {
-                  'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({ email, code: verificationCode }),
-          });
-    
-          const data = await response.json();
-
-            if (response.ok && data.success) {
-                setMessage('Verification successful! Redirecting...');
-                
-                setTimeout(() => { navigate('/login'); }, 2000);
-            } else {
-                setMessage('Verification failed. Please check the email and code, then try again.');
-            }
-        } catch (error) {
-            setMessage('An error occurred. Please try again later.');
-        } finally {
-            setIsLoading(false);
-        }
-    };
+    event.preventDefault();
+    setIsLoading(true);
+    setMessage('');
+    try {
+      const response = await fetch('https://userproviderrika-e6cvaydrc0edh7eb.westeurope-01.azurewebsites.net/verify', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ Email: email, VerificationCode: verificationCode })
+      });
+      
+      const data = await response.json();
+      console.log('Backend response:', data); 
+  
+      if (response.ok && data.success) {
+        setMessage('Verification successful! Redirecting...');
+        setTimeout(() => { navigate('/login'); }, 2000);
+      } else {
+        setMessage('Verification failed. Please check the email and code, then try again.');
+      }
+    } catch (error) {
+      console.error('Error occurred:', error); 
+      setMessage('An error occurred. Please try again later.');
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
 return (
     
