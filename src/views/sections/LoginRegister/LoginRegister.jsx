@@ -9,7 +9,7 @@ const LoginRegister = () => {
           <img src={logo} alt="" />
         </div>
         <a className='btn-social' href="/login">Login</a>
-        <a className='btn-gry' href="/signUp">Sign Up</a>
+        <a className='btn-gry' href="/register">Sign Up</a>
       </div>
     </>
   )
