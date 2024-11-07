@@ -31,6 +31,9 @@ const useLogin = () => {
           case 401:
             setError(data.message || 'User account not verified.');
             break;
+          default:
+            setError(data.message || "Something went wrong");
+          break;
         }
         return { success: false, error: data.message };
       }
