@@ -3,6 +3,59 @@
 
    .container {
 
+      .titleAndSort {
+         display: flex;
+         justify-content: space-between;
+
+         .sortDropdown {
+            position: relative;
+
+            .sortingButton {
+               @include text-s;
+               font-weight: bold;
+
+               border: 1px solid $color-background-grey;
+               border-radius: 5px;
+               padding: 5px 10px;
+            }
+
+            .dropdownContent {
+               display: flex;
+               flex-direction: column;
+
+               position: absolute;
+               right: 2px;
+               top: 35px;
+
+               .dropdownButton {
+                  display: block;
+                  width: 140px;
+
+                  color: $color-black;
+                  @include text-s;
+                  text-wrap: nowrap;
+
+                  border: 1px solid $color-background-grey;
+                  border-top: 0px;
+                  padding: 5px;
+                  border-radius: 5px;
+
+                  &:nth-child(1) {
+                     border-top: 1px solid $color-background-grey;
+                  }
+
+                  &:nth-child(odd) {
+                     background-color: white;
+                  }
+
+                  &:nth-child(even) {
+                     background-color: #eee;
+                  }
+               }
+            }
+         }
+      }
+
       h4 {
          @include h4;
          margin-bottom: 15px;
