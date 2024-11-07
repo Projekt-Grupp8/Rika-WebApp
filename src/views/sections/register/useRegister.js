@@ -161,7 +161,8 @@ export const useRegister = () => {
           setTimeout(() => {
             navigate('/verify'); // Ändra URL till den sida du vill omdirigera till
           }, 3000);
-        } else {
+        } 
+        else {
           // Hantera API-fel
           setErrorMessage(data.message || 'Something went wrong. Please try again later.');
           setSuccessMessage(''); // Rensa framgångsmeddelandet om ett fel uppstår
