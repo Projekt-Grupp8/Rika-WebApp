@@ -1,10 +1,8 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 const useLogin = () => {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const navigate = useNavigate();
 
   const login = async (email, password) => {
     setIsLoading(true);
@@ -18,23 +16,28 @@ const useLogin = () => {
         },
         body: JSON.stringify({ email, password }),
       });
-
       const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.message || 'Login failed');
+      
+      if (response.ok) {
+        if (data.status === "success") {
+          localStorage.setItem('token', data.data.token);  // Save token for authentication
+          window.location.reload();
+          return { success: true, data: data.data };
+        }
+        
+      } else {
+        // Handle different error responses from backend
+        switch (response.status) {
+          case 401:
+            setError(data.message || 'User account not verified.');
+            break;
+        }
+        return { success: false, error: data.message };
       }
 
-      localStorage.setItem('token', data.token); 
-      
-      navigate('/verify');
-
-      return { success: true, data };
-
     } catch (err) {
-      setError(err.message);
+      setError('Network error. Please check your connection.');
       return { success: false, error: err.message };
-
     } finally {
       setIsLoading(false);
     }

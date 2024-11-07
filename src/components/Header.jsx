@@ -14,7 +14,7 @@ function Header() {
     return (
         <header>
             <div className="header">
-                <a href="/">
+                <a href="/home">
                     <img src={Arrow} alt="arrow" />
                 </a>
                 <div className="input-container">
