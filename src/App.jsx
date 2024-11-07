@@ -1,12 +1,21 @@
 import './app.min.css';
 import LoginRegister from './views/sections/LoginRegister/LoginRegister.jsx';
-import RikaFront from './views/sections/RikaFront/RikaFront.jsx';
+import Login from './views/sections/Login/Login';
+import EmailVerify from './views/sections/EmailVerify/EmailVerify';
+import { Register } from './views/sections/register/Register'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 
 function App() {
   return (
-    <>
-      <LoginRegister />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/verify" element={<EmailVerify/>}/>
+        <Route path="/welcomescreen" element={<LoginRegister/>} />
+        <Route path="/register" element ={<Register/>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

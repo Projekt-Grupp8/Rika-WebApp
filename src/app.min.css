@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 .btn-facebook {
@@ -191,12 +192,243 @@
   background-color: rgb(102, 102, 102);
 }
 
-.Front {
-  background-color: rgb(204, 204, 204);
-  height: 100vh;
-  display: grid;
+#login-section {
+  font-family: montserrat;
+  padding-top: 110px;
+  padding-bottom: 35px;
+}
+#login-section .container {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
-.Front img {
-  justify-self: center;
+@media (min-width: 992px) {
+  #login-section .container {
+    max-width: 812px;
+  }
+}
+#login-section .container .login-welcome {
+  width: 100%;
+  padding-top: 55px;
+}
+#login-section .container .login-welcome h1 {
+  line-height: 150%;
+  font-weight: 400;
+  color: rgb(102, 102, 102);
+  font-family: "Atkinson Hyperlegible", Montserrat;
+  font-weight: 700;
+  color: #000000;
+  font-size: 20px !important;
+  font-family: montserrat;
+}
+#login-section .container .login-welcome p {
+  font-weight: 200;
+  color: rgb(102, 102, 102);
+  font-size: 14px;
+  font-family: montserrat;
+}
+#login-section .container .login-form {
+  width: 100%;
+  padding-top: 30px;
+}
+#login-section .container .login-form form {
+  display: flex;
+  flex-direction: column;
+}
+#login-section .container .login-form form .email {
+  display: flex;
+  flex-direction: column;
+}
+#login-section .container .login-form form .email label {
+  line-height: 150%;
+  font-weight: 400;
+  color: rgb(102, 102, 102);
+  font-family: "Atkinson Hyperlegible", Montserrat;
+  font-weight: 700;
+  color: #000000;
+  font-size: 16px !important;
+  font-family: montserrat;
+}
+#login-section .container .login-form form .email input {
+  border: none;
+  border-bottom: 1px solid #EEEEEE;
+  outline: none;
+}
+#login-section .container .login-form form .email input:focus {
+  border-bottom: 1px solid #000000;
+}
+#login-section .container .login-form form .password {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+#login-section .container .login-form form .password label {
+  line-height: 150%;
+  font-weight: 400;
+  color: rgb(102, 102, 102);
+  font-family: "Atkinson Hyperlegible", Montserrat;
+  font-weight: 700;
+  color: #000000;
+  font-size: 16px !important;
+  font-family: montserrat;
+}
+#login-section .container .login-form form .password input {
+  border: none;
+  border-bottom: 1px solid #EEEEEE;
+  outline: none;
+}
+#login-section .container .login-form form .password input:focus {
+  border-bottom: 1px solid #000000;
+}
+#login-section .container .login-form form .button-login {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+#login-section .container .login-form form .social-media-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+#login-section .container .login-form form .social-media-login button {
+  border: 0.5px solid #999999;
+  word-spacing: 0px;
+  justify-content: start;
+  padding-left: 2.6rem;
+}
+#login-section .container .login-form form .social-media-login button strong {
+  color: rgb(102, 102, 102);
+}
+#login-section .container .login-form form .social-media-login button .facebook {
+  color: white;
+}
+#login-section .container .login-form form .btn-width {
+  width: 100%;
+}
+
+#email-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10rem;
+}
+@media (min-width: 992px) {
+  #email-section .container {
+    max-width: 812px;
+  }
+}
+#email-section .container .email-welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4rem;
+  row-gap: 2rem;
+}
+#email-section .container .email-form {
+  padding: 0px 10px;
+  width: 100%;
+}
+#email-section .container .email-form form {
+  display: flex;
+  flex-direction: column;
+}
+#email-section .container .email-form form label {
+  font-weight: 700;
+}
+#email-section .container .email-form form input {
+  padding-bottom: 0.5rem;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+  border: none;
+  border-bottom: 1px solid #EEEEEE;
+  outline: none;
+}
+#email-section .container .email-form form input:focus {
+  border-bottom: 1px solid #000000;
+}
+
+#register .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (min-width: 992px) {
+  #register .container {
+    max-width: 812px;
+  }
+}
+#register .container .image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}
+#register .container .form-title {
+  margin-bottom: 3rem;
+  padding: 0px 10px;
+}
+#register .container .form-title h1 {
+  line-height: 150%;
+  font-weight: 400;
+  color: rgb(102, 102, 102);
+  font-family: "Atkinson Hyperlegible", Montserrat;
+  font-weight: 700;
+  color: #000000;
+  font-size: 20px !important;
+}
+#register .container .register-form {
+  padding: 0px 10px;
+}
+#register .container .register-form .input-area {
+  display: flex;
+  flex-direction: column;
+}
+#register .container .register-form .input-area label {
+  line-height: 150%;
+  font-weight: 400;
+  color: rgb(102, 102, 102);
+  font-family: "Atkinson Hyperlegible", Montserrat;
+  font-weight: 700;
+  color: #000000;
+  font-size: 16px !important;
+}
+#register .container .register-form .input-area input {
+  padding: 8px 0px;
+  border: none;
+  border-bottom: 1px solid #EEEEEE;
+  outline: none;
+}
+#register .container .register-form .input-area input:focus {
+  border-bottom: 1px solid #000000;
+}
+#register .container .register-form .success-message {
+  color: green;
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+#register .container .register-form .error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+#register .container .register-form .error-message::before {
+  content: "⚠️";
+  margin-right: 5px;
+}
+#register .container .register-form .terms-conditions {
+  display: flex;
+  align-items: start;
+}
+#register .container .register-form .terms-conditions input {
+  margin-top: 0.35rem;
+  margin-right: 0.5rem;
+}
+#register .container .register-form .btn-black {
+  width: 100%;
 }
