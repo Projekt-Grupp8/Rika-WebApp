@@ -1,0 +1,44 @@
+#email-section {
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10rem;
+        @include lg {
+            max-width: 812px;
+        }   
+        .email-welcome {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 4rem;
+            row-gap: 2rem;
+        }
+        .email-form {
+            padding: 0px 10px;
+            width: 100%;
+            form {
+                display: flex;
+                flex-direction: column;
+                
+                
+                label {
+                    font-weight: 700;
+                }
+                input {
+                    
+                    padding-bottom: 0.5rem;
+                    margin-bottom: 3rem;
+                    margin-top: 1rem;
+                    border: none;
+                    border-bottom: 1px solid #EEEEEE;
+                    outline: none;
+                    &:focus {
+                        border-bottom: 1px solid $color-black;
+                    }
+                }
+            }
+        }
+    }
+}

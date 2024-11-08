@@ -1,0 +1,81 @@
+#register {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+        @include lg {
+            max-width: 812px;
+        }
+        .image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 5rem;
+            margin-bottom: 3rem;
+        }
+        .form-title {
+            margin-bottom: 3rem;
+            padding: 0px 10px;
+
+            h1 {
+                @include h3;
+            }
+        }
+        .register-form {
+            padding: 0px 10px;
+
+            .input-area {
+                display: flex;
+                flex-direction: column;
+                
+
+                label {
+                    @include h5;
+                }
+                input {
+                    padding: 8px 0px;
+                    border: none;
+                    border-bottom: 1px solid #EEEEEE;
+                    outline: none;
+
+                    &:focus {
+                        border-bottom: 1px solid $color-black;
+                    }
+
+                }
+            }
+            .success-message {
+                color: green;
+                font-size: 14px;
+                margin-top: 10px;
+                font-weight: bold;
+              }
+
+            .error-message {
+                color: red;
+                font-size: 14px;
+                margin-top: 5px;
+                font-weight: bold;
+                
+                // Exempel på en ikon framför felmeddelandet
+                &::before {
+                  content: '⚠️'; // Unicode för en varningstriangel
+                  margin-right: 5px; // Mellanrum mellan ikonen och texten
+                }
+              }
+
+            .terms-conditions {
+                display: flex;
+                align-items: start;
+                input {
+                    margin-top: 0.35rem;
+                    margin-right:0.5rem;
+                }
+            }
+            .btn-black {
+                width: 100%;
+            }
+        }
+    }
+}
