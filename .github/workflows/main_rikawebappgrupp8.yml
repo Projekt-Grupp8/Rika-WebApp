@@ -30,6 +30,9 @@ jobs:
         run: Get-ChildItem -Recurse ./build
         shell: pwsh
 
+      - name: List artifacts
+        run: echo "Artifacts:" && ls -al
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
@@ -56,4 +59,4 @@ jobs:
           app-name: 'RikaWebAppGrupp8'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_214258F735CA466AB285E7020BE2922E }}
-          package: node-app  # Referera till artifact-namnet här
+          package: ./build
