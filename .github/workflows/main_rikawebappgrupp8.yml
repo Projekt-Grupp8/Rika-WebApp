@@ -27,7 +27,8 @@ jobs:
           npm run build --if-present
 
       - name: Confirm build directory exists
-        run: ls -al ./build  # Kollar om ./build finns och innehåller rätt filer
+        run: Get-ChildItem -Recurse ./build
+        shell: pwsh
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
