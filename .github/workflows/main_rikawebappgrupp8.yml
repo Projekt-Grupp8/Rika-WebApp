@@ -31,7 +31,10 @@ jobs:
         shell: pwsh
 
       - name: List artifacts
-        run: echo "Artifacts:" && ls -al
+        run: |
+          echo "Artifacts in build directory:"
+          Get-ChildItem -Recurse ./build
+        shell: pwsh
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
