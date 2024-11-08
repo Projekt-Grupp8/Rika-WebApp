@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const useLogin = () => {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
   const login = async (email, password) => {
     setIsLoading(true);
@@ -20,12 +22,13 @@ const useLogin = () => {
       
       if (response.ok) {
         if (data.status === "success") {
-          localStorage.setItem('token', data.data.token);  // Save token for authentication
-          window.location.reload();
-          return { success: true, data: data.data };
+          console.log('Received Token:', data.data.contentResult.token); 
+          localStorage.setItem('token', data.data.contentResult.token);  
+          navigate('/home');  
+          return { success: true, data: data.data.contentResult };
         }
-        
-      } else {
+      }
+       else {
         // Handle different error responses from backend
         switch (response.status) {
           case 401:
