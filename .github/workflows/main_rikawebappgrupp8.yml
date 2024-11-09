@@ -33,7 +33,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: RikaWebAppGrupp8
-          path: ${{ github.workspace }}/build
+          path: build
 
   deploy:
     runs-on: ubuntu-latest
@@ -50,6 +50,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: RikaWebAppGrupp8
+          path: ./build
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
@@ -58,4 +59,4 @@ jobs:
           app-name: 'RikaWebAppGrupp8'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_214258F735CA466AB285E7020BE2922E }}
-          package: ${{ github.workspace }}/Rika-WebApp
+          package: ./build
