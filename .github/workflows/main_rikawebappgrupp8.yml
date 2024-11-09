@@ -57,4 +57,5 @@ jobs:
         with:
           app-name: 'RikaWebAppGrupp8'
           slot-name: 'Production'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_214258F735CA466AB285E7020BE2922E }}
           package: ${{ github.workspace }}/Rika-WebApp
