@@ -1,27 +1,28 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Importa Link desde react-router-dom
 import './Footer.scss';  
 import home from '../images/home.svg'; 
 import cart from '../images/cart.svg'; 
 import notification from '../images/notification.svg'; 
 import profile from '../images/profile.svg'; 
 
-
 function Footer() {
     return (
         <footer>
             <div className="Nav-Footer container">
-                <a className="home" href="/home">
+              
+                <Link className="home" to="/home">
                     <img src={home} alt="Hem ikon" /> Home
-                </a>
-                <a href="/kundvagn">
+                </Link>
+                <Link to="/cart">
                     <img src={cart} alt="Kundvagn ikon" />
-                </a>
-                <a href="/notifikationer">
+                </Link>
+                <Link to="/notifikationer">
                     <img src={notification} alt="Notifikationer ikon" />
-                </a>
-                <a href="/user">
+                </Link>
+                <Link to="/user">
                     <img src={profile} alt="Profil ikon" />
-                </a>
+                </Link>
             </div>
         </footer>
     );

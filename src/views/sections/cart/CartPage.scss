@@ -1,0 +1,200 @@
+
+/* ============================================
+   General Layout - Keep your original styles
+============================================== */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .cart-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .cart-main-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+}
+
+/* ============================================
+   Shopping Cart Section - With unique class names
+============================================== */
+.cart-title {
+  font-weight: 700;
+  margin-left: 20px;
+}
+
+.cart-kundVagnCards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.cart-produkt-kort {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ededed;
+  border-radius: 8px;
+  padding: 16px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  
+
+  .cart-product-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+
+  &.show-delete {
+    .cart-product-content {
+      transform: translateX(-33%);
+    }
+    .cart-delete-overlay {
+      display: flex;
+    }
+  }
+
+  .cart-delete-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    transition: all 0.3s ease;
+
+    .cart-delete-icon {
+      width: 30px;
+      height: 30px;
+      color: white;
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .cart-product-image {
+    width: 80px;
+    height: auto;
+    margin-right: 16px;
+  }
+
+  .cart-product-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .cart-product-name {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .cart-product-description {
+      font-size: 14px;
+      color: #666;
+      margin: 4px 0;
+    }
+
+    .cart-product-price {
+      font-size: 16px;
+      font-weight: bold;
+      color: #101010;
+      margin-right: 110px;
+    }
+
+    .cart-price-quantity-container {
+      display: flex;
+      align-items: center;
+      margin-top: 8px;
+
+      .cart-quantity-control {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #ccc;
+        border-radius: 14px;
+        overflow: hidden;
+
+        .cart-quantity {
+          padding: 4px 8px;
+          min-width: 30px;
+          text-align: center;
+          background-color: #ccc;
+        }
+
+        button {
+          background-color: #ccc;
+          border: none;
+          padding: 4px 8px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #e0e0e0;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ============================================
+   Checkout Section - Unique class names
+============================================== */
+.cart-checkout-section {
+  margin-top: auto;
+  padding: 20px;
+
+  .cart-productTotal {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .totalh3{
+    color: #6b6a6a;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  .cart-btnCheckOut {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #090909;
+    font-size: 20px;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 16px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+
+    img {
+      margin-left: 8px;
+    }
+  }
+}
