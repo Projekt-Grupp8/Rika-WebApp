@@ -47,19 +47,15 @@ const CategoryPage = () => {
           console.error("Error fetching data:", response.status);
         }
       } catch (error) {
-        console.error("Error fetching products:", error);
-        console.log("API nyckel test:" + process.env.REACT_APP_AZURE_API_KEY); 
+        console.error("Error fetching products:", error); 
 
       } finally {
         setLoading(false);
       }
     };
-
     fetchProducts();
-    console.log("API nyckel test:" + process.env.REACT_APP_AZURE_API_KEY); 
-
   }, []);
-  console.log("API nyckel test:" + process.env.REACT_APP_AZURE_API_KEY); 
+
 
   if (loading) {
     return <div>Loading products...</div>;
