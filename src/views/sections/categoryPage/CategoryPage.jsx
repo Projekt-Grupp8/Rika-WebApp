@@ -10,11 +10,11 @@ const CategoryPage = () => {
     const fetchProducts = async () => {
       setLoading(true);
       try {
-        const response = await fetch('https://productprovider.azurewebsites.net/api/products?code=' + process.env.REACT_APP_AZURE_API_KEY, {
+        const response = await fetch('https://productprovider.azurewebsites.net/api/products?code=c3IOCzg9ga_u1M_acUhnEOXjVCbdL0IFLkeruDzo-f9sAzFubkMnkA%3D%3D' , {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer ' + process.env.REACT_APP_BEARER_TOKEN
+            //'Authorization': 'Bearer ' + process.env.REACT_APP_BEARER_TOKEN
           },
           body: JSON.stringify({
             query: `
@@ -49,7 +49,7 @@ const CategoryPage = () => {
       } catch (error) {
         console.error("Error fetching products:", error);
         console.log("API nyckel test:" + process.env.REACT_APP_AZURE_API_KEY); 
-        console.log("API Token test:" + process.env.REACT_APP_BEARER_TOKEN);
+
       } finally {
         setLoading(false);
       }
@@ -57,10 +57,10 @@ const CategoryPage = () => {
 
     fetchProducts();
     console.log("API nyckel test:" + process.env.REACT_APP_AZURE_API_KEY); 
-    console.log("API Token test:" + process.env.REACT_APP_BEARER_TOKEN);
+
   }, []);
   console.log("API nyckel test:" + process.env.REACT_APP_AZURE_API_KEY); 
-  console.log("API Token test:" + process.env.REACT_APP_BEARER_TOKEN);
+
   if (loading) {
     return <div>Loading products...</div>;
   }
