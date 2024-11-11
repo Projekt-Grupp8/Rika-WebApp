@@ -10,7 +10,7 @@ const CategoryPage = () => {
     const fetchProducts = async () => {
       setLoading(true);
       try {
-        const response = await fetch('/api/products?code=' + process.env.REACT_APP_AZURE_API_KEY, {
+        const response = await fetch('/api/products?code=c3IOCzg9ga_u1M_acUhnEOXjVCbdL0IFLkeruDzo-f9sAzFubkMnkA%3D%3D', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
