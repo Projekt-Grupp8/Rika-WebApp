@@ -30,8 +30,7 @@ const CategoryPage = () => {
             `
           })
         });
-        console.log("API nyckel test:" + process.env.REACT_APP_AZURE_API_KEY); 
-        console.log("API Token test:" + process.env.REACT_APP_BEARER_TOKEN);
+      
         if (response.ok) {
           const result = await response.json();
           if (result.data) {
@@ -49,14 +48,19 @@ const CategoryPage = () => {
         }
       } catch (error) {
         console.error("Error fetching products:", error);
+        console.log("API nyckel test:" + process.env.REACT_APP_AZURE_API_KEY); 
+        console.log("API Token test:" + process.env.REACT_APP_BEARER_TOKEN);
       } finally {
         setLoading(false);
       }
     };
 
     fetchProducts();
+    console.log("API nyckel test:" + process.env.REACT_APP_AZURE_API_KEY); 
+    console.log("API Token test:" + process.env.REACT_APP_BEARER_TOKEN);
   }, []);
-
+  console.log("API nyckel test:" + process.env.REACT_APP_AZURE_API_KEY); 
+  console.log("API Token test:" + process.env.REACT_APP_BEARER_TOKEN);
   if (loading) {
     return <div>Loading products...</div>;
   }
