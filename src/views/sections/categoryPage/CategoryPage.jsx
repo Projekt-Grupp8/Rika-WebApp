@@ -30,7 +30,8 @@ const CategoryPage = () => {
             `
           })
         });
-
+        console.log("API nyckel test:" + process.env.REACT_APP_AZURE_API_KEY); 
+        console.log("API Token test:" + process.env.REACT_APP_BEARER_TOKEN);
         if (response.ok) {
           const result = await response.json();
           if (result.data) {
