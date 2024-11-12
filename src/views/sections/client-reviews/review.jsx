@@ -7,9 +7,9 @@ export default function Review({ name, date, rating, textContent, imageURL }) {
             {/* Image side */}
             <div className="imageSide">
                {
-                  imageURL == "" ?
+                  imageURL === "" ?
                      <></> :
-                     <img src={imageURL} alt="User's profile image" />
+                     <img src={imageURL} alt="User's profile" />
                }
             </div>
 
