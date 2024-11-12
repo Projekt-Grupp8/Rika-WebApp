@@ -13,6 +13,7 @@ export const useRegister = () => {
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
 
   // Regex-mönster för validering
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // E-post regex
@@ -122,7 +123,7 @@ export const useRegister = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault(); // Förhindra standard submit-beteende
-
+    setLoading(true);
     if (!isChecked) {
       alert("You must accept the terms and conditions to register.");
       return;

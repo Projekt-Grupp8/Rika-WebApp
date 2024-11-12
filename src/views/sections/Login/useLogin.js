@@ -24,7 +24,7 @@ const useLogin = () => {
         if (data.status === "success") {
           console.log('Received Token:', data.data.contentResult.token); 
           localStorage.setItem('token', data.data.contentResult.token);  
-          navigate('/home');  
+          window.location.reload();  
           return { success: true, data: data.data.contentResult };
         }
       }

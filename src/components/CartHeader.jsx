@@ -9,7 +9,7 @@ const CartHeader = () => {
     <header>
       <div className="header-cart">
        
-        <Link to="/product">
+        <Link to="/home">
           <img src={Arrow} alt="arrow" />
         </Link>
         <div className="icon-container">
