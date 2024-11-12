@@ -1,10 +1,12 @@
 
 import React, { useEffect, useState } from 'react';
 import ProductCard from '../../../components/ProductCard';
+import { useNavigate } from 'react-router-dom';
 
 const CategoryPage = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -56,6 +58,10 @@ const CategoryPage = () => {
     fetchProducts();
   }, []);
 
+  const handleProductClick = (id) => {
+    navigate(`/productdetails/${id}`);
+  };
+
 
   if (loading) {
     return <div>Loading products...</div>;
@@ -66,7 +72,9 @@ const CategoryPage = () => {
       <h1>Products</h1>
       <div className="Grid-Product">
         {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
+          <div key={product.id} onClick={() => handleProductClick(product.id)} style={{ cursor: 'pointer' }}>
+          <ProductCard product={product} />
+          </div>
         ))}
       </div>
     </main>

@@ -14,6 +14,7 @@ import CartPage from './views/sections/cart/CartPage.jsx';
 import Reviews from './views/sections/client-reviews/client-reviews.jsx';
 import { useLocation } from 'react-router-dom';
 import CategoryList from './components/Categories.jsx';
+import ProductDetails from './views/sections/ProductDetails/ProductDetails.jsx';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -43,7 +44,7 @@ function AuthLayout({ isAuthenticated, setIsAuthenticated }) {
   return (
     <>
      
-     {isAuthenticated && location.pathname !== "/cart" && location.pathname !== "/home" && <Header />}
+     {isAuthenticated && location.pathname !== "/cart" && location.pathname !== "/home" && !location.pathname.includes("/productdetails") && <Header />}
 
 
       <Routes>
@@ -55,6 +56,7 @@ function AuthLayout({ isAuthenticated, setIsAuthenticated }) {
         <Route path="/home" element={isAuthenticated ? <MinePage onLogout={handleLogout} /> : <Navigate to="/login" />} />
         <Route path="/user" element={localStorage.getItem('token') ? <User onLogout={handleLogout} /> : <Navigate to="/login" />} />
         <Route path="/categorylist" element={localStorage.getItem('token') ? <CategoryList onLogout={handleLogout} /> : <Navigate to="/login" />} />
+        <Route path="/productdetails/:id" element={localStorage.getItem('token') ? <ProductDetails onLogout={handleLogout} /> : <Navigate to="/login" />} />
         <Route
           path="/product"
           element={localStorage.getItem('token') ? <CategoryPage onLogout={handleLogout} /> : <Navigate to="/login" />}
@@ -68,7 +70,10 @@ function AuthLayout({ isAuthenticated, setIsAuthenticated }) {
       </Routes>
 
 
-      {isAuthenticated && location.pathname !== "/cart" && <Footer />}
+      {isAuthenticated && 
+      location.pathname !== "/cart" && 
+      !location.pathname.includes("/productdetails") &&
+      <Footer />}
     </>
   );
 }
