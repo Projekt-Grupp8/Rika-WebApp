@@ -13,7 +13,7 @@ export const useRegister = () => {
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate();
-  const [loading, setLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   // Regex-mönster för validering
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // E-post regex
@@ -123,7 +123,7 @@ export const useRegister = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault(); // Förhindra standard submit-beteende
-    setLoading(true);
+    setIsLoading(true);
     if (!isChecked) {
       alert("You must accept the terms and conditions to register.");
       return;
@@ -172,7 +172,9 @@ export const useRegister = () => {
         setErrorMessage('Something went wrong.');
         setSuccessMessage(''); // Rensa framgångsmeddelandet om ett fel uppstår
       }
-
+      finally {
+      setIsLoading(false);
+      }
     // Hantera formulärdata här (skicka till server, etc.)
     console.log("Formuläret har skickats:", formData);
   };
@@ -183,6 +185,7 @@ export const useRegister = () => {
     errors,
     successMessage,
     errorMessage,
+    isLoading,
     handleCheckboxChange,
     handleInputChange,
     handleSubmit,

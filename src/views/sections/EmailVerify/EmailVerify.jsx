@@ -21,14 +21,14 @@ const EmailVerify = () => {
         },
         body: JSON.stringify({ Email: email, VerificationCode: verificationCode })
       });
-      
-      const data = await response.json();
-      console.log('Backend response:', data); 
   
-      if (response.ok && data.success) {
+      // Check if the response is OK (status in the 200 range)
+      if (response.ok) {
+        console.log('Verification successful, redirecting to login...');
         setMessage('Verification successful! Redirecting...');
-        setTimeout(() => { navigate('/login'); }, 2000);
+        setTimeout(() => { navigate('/login'); }, 1000);
       } else {
+        // Handle non-200 responses here
         setMessage('Verification failed. Please check the email and code, then try again.');
       }
     } catch (error) {
@@ -38,6 +38,7 @@ const EmailVerify = () => {
       setIsLoading(false);
     }
   };
+  
 
 return (
     

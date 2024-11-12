@@ -11,7 +11,7 @@ export const Register = () => {
         errors,
         successMessage,
         errorMessage,
-        loading,
+        isLoading,
         handleCheckboxChange,
         handleInputChange,
         handleSubmit,
@@ -55,8 +55,8 @@ export const Register = () => {
                         <button
                         className="btn-black"
                         type="submit"
-                        disabled={!isChecked || loading}>
-                        {loading ? "Loading..." : "Register"}
+                        disabled={!isChecked || isLoading}>
+                        {isLoading ? "Loading..." : "Register"}
                         </button>
                         
                         {successMessage && <p className="success-message">{successMessage}</p>}
