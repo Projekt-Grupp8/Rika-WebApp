@@ -13,6 +13,7 @@ import { useState, useEffect } from 'react';
 import CartPage from './views/sections/cart/CartPage.jsx';
 import Reviews from './views/sections/client-reviews/client-reviews.jsx';
 import { useLocation } from 'react-router-dom';
+import CategoryList from './components/Categories.jsx';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -53,7 +54,7 @@ function AuthLayout({ isAuthenticated, setIsAuthenticated }) {
 
         <Route path="/home" element={isAuthenticated ? <MinePage onLogout={handleLogout} /> : <Navigate to="/login" />} />
         <Route path="/user" element={localStorage.getItem('token') ? <User onLogout={handleLogout} /> : <Navigate to="/login" />} />
-
+        <Route path="/categorylist" element={localStorage.getItem('token') ? <CategoryList onLogout={handleLogout} /> : <Navigate to="/login" />} />
         <Route
           path="/product"
           element={localStorage.getItem('token') ? <CategoryPage onLogout={handleLogout} /> : <Navigate to="/login" />}

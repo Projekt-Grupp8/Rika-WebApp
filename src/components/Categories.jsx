@@ -1,18 +1,25 @@
 import React from 'react'
 import './_Categories.scss'
+import { Link } from 'react-router-dom'
 
 const Categories = () => {
   return (
-    <div className='categories'>
+    <section id='categories'>
+    <div className='container'>
         <h1>Categories</h1>
+        
         <nav>
+            <Link className='text-link' to="/product">
             <button className='btn-categories'>
+                
                 <div className='title'>
                     <i class="fa-sharp fa-light fa-cart-arrow-down"></i>
                     <h2>New Arrivals</h2>
                 </div>
                 <p>208 Products</p>
             </button>
+            </Link>
+            <Link className='text-link' to="/product">
             <button className='btn-categories'>
                 <div className='title'>
                     <i class="fa-sharp fa-light fa-shirt"></i>
@@ -20,6 +27,8 @@ const Categories = () => {
                 </div>
                 <p>358 Products</p>
             </button>
+            </Link>
+            <Link className='text-link' to="/product">
             <button className='btn-categories'>
                 <div className='title'>
                     <i class="fa-sharp fa-light fa-bag-shopping"></i>
@@ -27,6 +36,8 @@ const Categories = () => {
                 </div>
                 <p>160 Products</p>
             </button>
+            </Link>
+            <Link className='text-link' to="/product">
             <button className='btn-categories'>
                 <div className='title'>
                     <i class="fa-light fa-boot-heeled"></i>
@@ -34,6 +45,8 @@ const Categories = () => {
                 </div>
                 <p>230 Products</p>
             </button>
+            </Link>
+            <Link className='text-link' to="/product">
             <button className='btn-categories'>
                 <div className='title'>
                     <i class="fa-sharp fa-light fa-plug"></i>
@@ -41,6 +54,8 @@ const Categories = () => {
                 </div>
                 <p>130 Products</p>
             </button>
+            </Link>
+            <Link className='text-link' to="/product">
             <button className='btn-categories'>
                 <div className='title'>
                     <i class="fa-light fa-ring-diamond"></i>
@@ -48,9 +63,11 @@ const Categories = () => {
                 </div>
                 <p>87 Products</p>
             </button>
+            </Link>
         </nav>
+        
     </div>
-
+    </section>
   )
 }
 

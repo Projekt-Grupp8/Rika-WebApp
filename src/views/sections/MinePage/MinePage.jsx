@@ -3,6 +3,7 @@ import CategoryPage from '../categoryPage/CategoryPage'
 import Reviews from '../client-reviews/client-reviews'
 import Search from '../../../images/search.svg'
 import Menu from '../../../images/menu.svg'
+import { Link } from 'react-router-dom';
 
 function MinePage () {
   const [searchText, setSearchText] = useState('');
@@ -30,7 +31,9 @@ function MinePage () {
                 placeholder="Search..."   
               />
             </div> 
-            <img src={Menu} alt="button for category menu" className="category-icon" />
+            <Link to="/categorylist">
+              <img src={Menu} alt="button for category menu" className="category-icon" />
+            </Link>
           </div>
         </div>
         <CategoryPage />
