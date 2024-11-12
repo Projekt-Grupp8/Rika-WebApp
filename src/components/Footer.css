@@ -1,0 +1,59 @@
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+footer .Nav-Footer.container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .Nav-Footer.container a {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transition: color 0.3s ease;
+}
+footer .Nav-Footer.container a:not(:first-child) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+footer .Nav-Footer.container a img {
+  width: 18px;
+  height: auto;
+  margin-bottom: 5px;
+}
+footer .Nav-Footer.container a:first-child {
+  background-color: #f0f0f0;
+  padding-right: 20px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 8px;
+}
+footer .Nav-Footer.container a:first-child img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+footer .Nav-Footer.container a:first-child:hover {
+  background-color: #333;
+  color: #fff;
+}/*# sourceMappingURL=Footer.css.map */
