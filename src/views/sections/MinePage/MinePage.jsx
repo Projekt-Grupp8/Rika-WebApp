@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import CategoryPage from '../categoryPage/CategoryPage'
-import Reviews from '../client-reviews/client-reviews'
 import Search from '../../../images/search.svg'
 import Menu from '../../../images/menu.svg'
 import { Link } from 'react-router-dom';
