@@ -41,8 +41,9 @@ function AuthLayout({ isAuthenticated, setIsAuthenticated }) {
 
   return (
     <>
+     
+     {isAuthenticated && location.pathname !== "/cart" && location.pathname !== "/home" && <Header />}
 
-      {isAuthenticated && location.pathname !== "/cart" && <Header />}
 
       <Routes>
         <Route path="/login" element={isAuthenticated ? <Navigate to="/home" /> : <Login />} />

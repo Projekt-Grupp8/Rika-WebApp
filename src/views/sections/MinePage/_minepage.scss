@@ -1,0 +1,57 @@
+#mine-page {
+    padding-top: 40px;
+    .container {
+        .mine-welcome {
+            padding: 20px;
+            h1 {
+                font-weight: 700;
+                margin-bottom: 7px;
+            }
+            p {
+                color: $color-grey; 
+            }
+        }
+        .mine-filter {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            padding: 10px;
+            .input-container {
+                position: relative;
+                display: flex;
+                align-items: center;
+                width: 100%; 
+                border: none;
+                border-radius: 30px;
+                padding-left: 40px; 
+                padding-top: 5px;
+                padding-bottom: 5px;
+                background-color: rgba(243, 244, 245, 1); 
+              
+                .input-search {
+                  position: absolute;
+                  left: 15px; 
+                  width: 20px;
+                  height: 20px;
+                  pointer-events: none;
+                }
+              
+                .input-field {
+                  flex: 1;
+                  padding: 10px;
+                  border: none; 
+                  outline: none; 
+                  background-color: transparent; 
+                  font-size: 13px;
+              
+                  &::placeholder {
+                    color: #999;
+                  }
+                }
+              }
+              
+              
+        }
+    }
+}

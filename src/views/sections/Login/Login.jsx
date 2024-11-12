@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import logo from '../../../images/logo_black.svg';
 import useLogin from './useLogin';
+import { Link } from 'react-router-dom';
 
 const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 const emailRegex = /^[^\s@]+@[^\s@]+.[^\s@]+$/;
@@ -76,6 +77,9 @@ const Login = () => {
               <p>or</p>
             </div>
             <div className="social-media-login">
+              <Link to="/register" className="btn-width btn-black">
+                <button style={{textAlign: 'start', border: 'none', textDecoration: 'none', backgroundColor: 'transparent', color: 'white', padding: '0'}}>Sign Up</button>
+              </Link>
               <button className="btn-facebook btn-width"><i class="fa-brands fa-facebook"></i><span>Continue with<strong className="facebook"> Facebook</strong></span></button>
               <button className="btn-social btn-width"><i class="fa-brands fa-google"></i><span>Continue with<strong> Google</strong></span></button>
               <button className="btn-social btn-width"><i class="fa-brands fa-apple"></i><span>Continue with<strong> Apple</strong></span></button>

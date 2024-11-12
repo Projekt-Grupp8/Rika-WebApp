@@ -11,6 +11,7 @@ export const Register = () => {
         errors,
         successMessage,
         errorMessage,
+        loading,
         handleCheckboxChange,
         handleInputChange,
         handleSubmit,
@@ -51,8 +52,13 @@ export const Register = () => {
                             <input type="checkbox" checked={isChecked} onChange={handleCheckboxChange}/>
                             <p>By creating an account you have to agree with our terms & conditions</p>
                         </div>
-                        <button className="btn-black" type="submit" disabled={!isChecked}>Register</button>
-
+                        <button
+                        className="btn-black"
+                        type="submit"
+                        disabled={!isChecked || loading}>
+                        {loading ? "Loading..." : "Register"}
+                        </button>
+                        
                         {successMessage && <p className="success-message">{successMessage}</p>}
                         {errorMessage && <p className="error-message">{errorMessage}</p>}
                     </form>
