@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRegister } from './useRegister'
 import logoBlack from '../../../images/logo_black.svg'
+import { Link } from 'react-router-dom';
 
 
 export const Register = () => {
@@ -62,6 +63,11 @@ export const Register = () => {
                         {successMessage && <p className="success-message">{successMessage}</p>}
                         {errorMessage && <p className="error-message">{errorMessage}</p>}
                     </form>
+                    <div className="registered">
+                        <Link to="/login" className="btn-black">
+                            <button style={{textAlign: 'start', border: 'none', textDecoration: 'none', backgroundColor: 'transparent', color: 'white'}}>Already a member? click here</button>
+                        </Link>
+                    </div>
                 </div>
             </section>
     )
