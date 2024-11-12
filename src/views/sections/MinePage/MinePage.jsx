@@ -37,7 +37,6 @@ function MinePage () {
           </div>
         </div>
         <CategoryPage />
-        <Reviews />
     </section>
   )
 
